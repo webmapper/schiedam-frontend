@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dashboard Schiedam</title>
+        <meta name="description" content="Dashboard gemeente Schiedam: datagestuurde beleidsontwikkeling.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="gfx/favicon.ico">
+        <!-- Voorbereiding voor mobiel -->
+        <meta http-equiv="cleartype" content="on">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Dashboard Schiedam">
+        <!-- / Voorbereiding voor mobiel -->
+        <link rel="stylesheet" href="styles/leaflet.css" />
+        <link rel="stylesheet" href="styles/MarkerCluster.css"/>
+        <link rel="stylesheet" href="styles/MarkerCluster.Default.css"/>
+        <link rel="stylesheet" href="styles/jquery-ui.min.concat.css"/>
+        <link rel="stylesheet" href="styles/pure-min.css"/>
+        <link rel="stylesheet" href="styles/grids-responsive-min.css"/>
+        <link rel="stylesheet" href="styles/main.css"/>
+        <link rel="stylesheet" href="styles/nouislider.pips.css"/>
+        <link rel="stylesheet" href="styles/font-awesome.min.css"/>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="wrap">
+        <!--header en filter sectie    -->
+            <header class="pure-g">
+                <div class="headercontainer pure-u-1 pure-u-xl-11-24 pure-u-lg-9-24 pure-u-md-7-24">
+                    <div id="header">
+                        <div class="logo">
+                            <img class="logo-schiedam" src="gfx/gemeente-schiedam-sml.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="selectcontainer pure-u-1 pure-u-xl-6-24 pure-u-lg-8-24 pure-u-md-10-24">
+                    <div id="select" class="select-flex">
+                        <div id="buurten" class="tools-flex">
+                            <div class="input-wrapper">
+                                <input type="text" id="ttinput" placeholder="Alle buurten">
+                                <i class="fa fa-search fa-lg"></i>
+                            </div>
+                            <div  class="buurttogglebutton">
+                                <i id="eenbuurtdata"></i>
+                            </div>
+                        </div>
+                        <div id="buurtinfobox" class="buurtinfo-outer-rightalign">
+                            <div class="buurtinfo-inner-leftalign">
+                                <p id="stort">stortingen: 186</p>
+                                <p id="vul">vullingsperentage:</p>
+                                <p id="meld">meldingen: 23</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filtercontainer pure-u-1 pure-u-md-7-24">
+                    <div id="filters">
+                                                <div id="slider">
+                            <div id="slider-date"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        <!--  scatterplot en map  -->
+            <div class="pure-g">
+                <div id="panelcontainer" class="pure-u-1 pure-u-md-17-24">
+                    <h2>stortingen versus vulgraad</h2>
+                    <div id="chartcontainer">
+                        <div id = "no-data-info">Geen meldingen/stortingen beschikbaar voor deze buurt en/of tijdsrange.</div>
+                    </div>
+                </div>
+                <div id="mapcontainer" class="pure-u-1 pure-u-md-7-24">
+                    <div id="map-canvas"></div>
+                </div>
+            </div>
+        </div>
+        <script src="libs/lie.polyfill.min.js"></script>
+        <script src="libs/jquery-2.1.0.min.js"></script>
+        <script src="libs/jquery-ui.min.js"></script>
+        <script src="libs/jquery-ui.datepicker-nl.js"></script>
+        <script src="libs/d3.v3.min.js"></script>
+        <script src="libs/topojson.v1.min.js"></script>
+        <script src="libs/leaflet.js"></script>
+        <script src="libs/leaflet.markercluster-src.js"></script>
+        <script src="libs/wNumb.min.js"></script>
+        <script src="libs/nouislider.min.js"></script>
+        <script src="libs/typeahead.bundle.js"></script>
+        <script src="data/containers.geojson"></script>
+        <script src="data/scholen.geojson"></script>
+        <script src="scripts/main.js"></script> 
+    </body>
+</html>
